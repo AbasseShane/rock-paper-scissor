@@ -4,7 +4,7 @@ function getComputerChoice(){
     return choices[choice]
 }
 
-function play(playerChoice, computerChoice)
+function playRound(playerChoice, computerChoice)
 {
     let playerHand = playerChoice.toLowerCase()
 
@@ -28,6 +28,32 @@ function play(playerChoice, computerChoice)
 
 }
 
-let answer = prompt("Choose between rock, paper or scissors")
-let result = play(answer,getComputerChoice())
-console.log(result)
+function playGame() 
+{
+    let playerPoints = 0
+    let computerPoints = 0
+    let winner
+    for(let i=1;i<=5;i++)
+    {
+        let playerChoice = prompt("Enter your choice (rock/paper/scissors):")
+        let round = playRound(playerChoice, getComputerChoice())
+        console.log(round)
+        let lines = round.split("\n")
+        let lastLine = lines[lines.length -1]
+        if(lastLine === "Congratulations! You win!")
+            playerPoints++
+        else if(lastLine === "Computer win!")
+            computerPoints++
+    }
+    if(playerPoints>computerPoints)
+        winner = "Player"
+    else
+        winner = "Computer"
+    console.log("playerPoints : " + playerPoints+ "\ncomputerPoints : "+computerPoints+"\nThe winner is : "+winner);
+}
+
+// let answer = prompt("Choose between rock, paper or scissors")
+// let result = playRound(answer,getComputerChoice())
+let game = playGame(5)
+
+// console.log(result)
