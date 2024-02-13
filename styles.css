@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: roboto, "poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.header {
+    background-color: #313030;
+    color: #bdbdbd;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+}
+
+.points-container{
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    gap: 10rem;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    font-weight: bold;
+}
+
+.player-choices-button {
+    background-color: grey;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.button{
+    padding: 10px 30px;
+    background: linear-gradient(to right, red , darkred);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.action-buttons button {
+    padding: 10px 30px;
+    background: linear-gradient(to right, yellow , #85853f);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid pink;
+}
+
+.selected {
+    background:linear-gradient(to right, blue, lightblue);
+    cursor: not-allowed;
+}
+
+/* .button:hover {
+    background:linear-gradient(to right, white, black);
+    color: black;
+}  */
+
+
+
+.game-area{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    flex: 1;
+}
+
+.choices-result {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.result {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
